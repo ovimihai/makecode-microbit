@@ -1,14 +1,7 @@
+let Deg = 0
 input.onButtonPressed(Button.AB, function () {
     input.calibrateCompass()
 })
-let Deg = 0
-basic.showLeds(`
-    . . # . .
-    . . # # .
-    . # . . .
-    . # # # #
-    . . # . .
-    `)
 basic.forever(function () {
     Deg = input.compassHeading()
     if (Deg < 45) {
